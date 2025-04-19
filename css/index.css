@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background-color: rgb(10, 10, 10);
+    color: white;
+    font-family: roboto, arial;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 85%;
+    position: absolute;
+    top: 0;
+    bottom: 120px;
+    overflow-y: auto;
+    padding: 10px;
+    z-index: 0;
+}
+
+.off{
+    filter: brightness(50%);
+    pointer-events: none;
+}
+
+.user, .bot {
+    transition: opacity 0.2s linear;
+    display: inline-block;
+    background-color: rgb(60, 60, 60);
+    padding: 10px;
+    margin: 10px;
+    width: fit-content;
+    max-width: 60%;
+    border-radius: 5px;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+
+.user {
+    margin-left: auto;
+    border-radius: 5px 0px 0px 5px;
+    padding-right: 120px;
+    background: linear-gradient(270deg,rgba(0,0,0,0),rgba(0,0,0,0), rgba(60, 60, 60)  150px);
+}
+
+.bot {
+    margin-right: auto;
+    border-radius: 0px 5px 5px 0px;
+    padding-left: 120px;
+    background: linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,0), rgba(60, 60, 60)  150px);
+}
+
+
+.starting{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s ease;
+    z-index: 1;
+}
+
+.painelOff{
+    opacity: 0;
+    pointer-events: none
+}
+
+.interact{
+    position: absolute;
+    bottom: 30px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    cursor: text;
+    transition: position 0.01s ease, bottom 0.2s ease;
+    z-index: 2;
+}
+
+.interact:active{
+    bottom: 25px;
+}
+
+.divInput{
+    display: flex;
+    background-color: rgb(80, 80, 80);
+    width: 90%;
+    height: 80px;
+    border-radius: 15px;
+    outline: 1px solid black;
+    filter: drop-shadow(0px 0px 5px black);
+    text-align: left;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.inputText{
+    all: unset;
+    background-color: rgb(80, 80, 80);
+    width: 99%;
+    word-wrap: break-word;
+}
+
+.send{
+    all: unset;
+    position: relative;
+    background-color: rgb(60, 60, 60);
+    width: 30px;
+    height: 80px;
+    left: -20px;
+    border-radius: 0px 15px 15px 0px;
+    color: rgb(190, 190, 190);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.send:hover{
+    transition: normal 0.1s linear;
+    filter:brightness(120%)
+}
+
+.sugestionContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+    height: 30%;
+    margin: 50px;    
+}
+
+.sugestion{
+    background-color: rgb(60, 60, 60);
+    width: 30%;
+    min-width: 150px;
+    height: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow:hidden;
+    transition: scale 0.2s ease, filter 0.2s ease;
+    scrollbar-width: none;
+}
+
+.sugestion:hover{
+    scale: 1.02;
+    filter: brightness(110%);
+    overflow: scroll;
+}
+
+nav{
+    position: absolute;
+    display: flex;
+    top: 10px;
+    left: 50px;
+    z-index: 11;
+}
+
+.menuLeft{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.options button::after,
+.options button::before,
+.options button span{
+    content: "";
+    position: relative;
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.options button::after{
+    bottom: 0;
+}
+
+.navButtons{
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(60, 60, 60);
+    border-radius: 5px;
+    justify-content: center;
+    gap: 20%;
+    align-items: center;
+    cursor: pointer;
+    transition: filter 0.2s ease, scale 0.2s ease;
+}
+
+.navButtons:hover{
+    filter: brightness(130%);
+    filter: drop-shadow(0px 0px 5px black);
+    scale: 105%;
+}
+
+.navButtons:active{
+    scale: 90%;
+    filter: brightness(100%);
+}
+
+.newChatButton::after,
+.newChatButton::before{
+    content: "";
+    display: block;
+    background-color: white;
+    width: 20px;
+    height: 3px;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.newChatButton::after{
+    transform: rotate(90deg);
+}
+
+.model-select{
+    width: 200px;
+    height: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: rgb(180, 180, 180);
+    background-color: rgb(60, 60, 60);
+    border: 1px solid rgb(10, 10, 10);
+    border-radius: 5px;
+}
+
+.sugTitle{
+    margin: 10px 0px 10px 0px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.sugText{
+    display: flex;
+    background: linear-gradient(to top, rgb(60, 60, 60), gray);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family:roboto, arial;
+    font-size: 20px;
+    margin: 10px;
+    text-align: justify;
+    transition: color 0.2s ease;
+}
+
+.sugText:hover{
+    color: gray;
+}

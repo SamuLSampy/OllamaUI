@@ -1,0 +1,23 @@
+@media (max-width:1000px){
+    body{
+        margin: 0;
+        width: 100%;
+    }
+    .chat{
+        top: 45px;
+        width: 100%;
+    }
+
+    nav{
+        background-color: red;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        margin: 0;
+        top: 0;
+        padding: 10px;
+    }
+
+
+
+}

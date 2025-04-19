@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <nav>
+        <div class="menuLeft">
+            <div class="options">
+                <button class="optionsButton navButtons">
+                    <span></span>
+                </button>
+            </div>
+            <div class="list">
+                <select name="models" class="model-select">
+                </select>
+            </div>
+            <div class="newChat">
+                <button class="newChatButton navButtons">
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="backMenu backMenuOff">
+        <div class="showMenu showMenuOff">
+            <div class="menuSafeZone">
+                
+                <div class="ollamaUrl menuContainer">
+                    <span>Ollama URL</span>
+                    <input type="text" name="ollamaUrl" class="inputOllamaUrl" placeholder="http://127.0.0.1:11434">
+                    <div class="containerUrl">
+                        <button class="verificarUrl">Verificar</button>
+                        <div><span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="starting">
+        <img src="src/img/logo.png" alt="">
+        <h1 class="welcome">Olá, llama!</h1>
+        <div class="sugestionContainer">
+            <div class="container1 sugestion">
+                <div class="sugTitle">
+                    <span>🧠 Desafie-me!</span>
+                </div>
+                <div class="sugText">
+                    <span>“Me faça um enigma lógico que poucas pessoas conseguem resolver!”</span>
+                </div>
+            </div>
+            <div class="container2 sugestion">
+                <div class="sugTitle">
+                    <span>✏️ Seja um ator!</span>
+                </div>
+                <div class="sugText">
+                    <span>Reescreva a história da Chapeuzinho Vermelho como se fosse Stephen King.</span>
+                </div>
+            </div>
+            <div class="container3 sugestion">
+                <div class="sugTitle">
+                    <span>🛠️ Ajuda no projeto?</span>
+                </div>
+                <div class="sugText">
+                    <span>Quero criar uma aplicação web de produtividade, por onde começo?</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chat"></div>
+    <div class="interact">
+        <div class="divInput">
+            <input type="text" name="inputText" class="inputText" placeholder="Começe a conversar!">
+        </div>
+        <button class="send">◭</button>
+    </div>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/ollama.js"></script>
+</body>
+</html>

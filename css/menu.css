@@ -1,0 +1,122 @@
+:root{
+    --larguraMenu: 400px
+}
+
+.backMenu{
+    top: 0;
+    position: absolute;
+    background: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    font-family: 'Courier New', Courier, monospace;
+    transition: opacity 0.2s ease;
+}
+
+.backMenuOff{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.showMenu{
+    position: absolute;
+    left: 0;
+    background-color: rgb(50, 50, 50);
+    width: var(--larguraMenu);
+    height: 100%;
+    transition: left 0.2s ease;
+}
+
+.showMenuOff{
+    pointer-events: none;
+    left: calc(var(--larguraMenu) * -1);
+
+}
+
+.menuSafeZone{
+    position: relative;
+    top: 80px;
+    margin: 10px;
+    width: calc(100% - margin);
+    z-index: 25;
+    pointer-events:all;
+}
+
+.menuContainer{
+    border-bottom: 1px solid rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    text-align: left;
+}
+
+.menuContainer input[type="text"]{
+    all: unset;
+    padding-left: 10px;
+    background-color: rgb(40, 40, 40);
+    height: 30px;
+    border-radius: 5px;
+    color: gray;
+}
+
+.menuContainer input[type="text"]:focus{
+    all: unset;
+    padding-left: 10px;
+    background-color: rgb(40, 40, 40);
+    height: 30px;
+    outline: 1px solid rgb(22, 0, 0);
+    border-radius: 5px;
+    color: gray;
+}
+
+.menuContainer button{
+    all: unset;
+    padding: 0px 10px 0px 10px;
+    background-color: rgb(45, 45, 45);
+    height: 30px;
+    outline: 1px solid black;
+    border-radius: 5px;
+    width:fit-content;
+    color: gray;
+    transition: filter 0.2s ease, scale 0.2s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.menuContainer button:hover{
+    filter: brightness(110%);
+    filter:drop-shadow(0px 0px 2px black);
+    scale: 1.03;
+    color: rgb(150, 150, 150);
+}
+
+.menuContainer button:active{
+    scale: 0.95;
+    filter: brightness(95%);
+    filter: drop-shadow(0px 0px 0px black);
+}
+
+.containerUrl{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.containerUrl div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(40, 40, 40);
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.containerUrl span{
+    background-color: gray;
+    filter: drop-shadow(0px 0px 2px gray);
+    width: 15px;
+    height: 15px;
+    transition: filter 0.2s ease, background-color 0.2s ease;
+}
