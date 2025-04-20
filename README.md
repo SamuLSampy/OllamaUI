@@ -6,6 +6,7 @@ Bem-vindo ao **Ollama UI**! Este é um site de front-end desenvolvido para integ
 
 Você pode acessar o site no seguinte link:  
 [Ollama UI](https://ollama-ui-ten.vercel.app/)
+Ainda sem suporte para mobile
 
 *O site servirá apenas para demonstração visual, não podendo se conectar diretamente com o ollama local em sua máquina, sendo necessário instala-lo para isso.*
 
