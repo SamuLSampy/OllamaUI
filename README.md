@@ -34,4 +34,4 @@ Ainda sem suporte para mobile
 
 2. Após a execução, abra o menu lateral do site e insira o endereço de execução do Ollama (normalmente ```http://127.0.0.1:11434```).
 
-3. Configuração feita! Agora você pode selecionar o modelo na seleção na parte superior do site começar a interagir.
+3. Configuração feita! Agora você pode selecionar o modelo na seleção da parte superior do site e começar a interagir.

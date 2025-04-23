@@ -160,7 +160,19 @@ sendButton.addEventListener("click", e =>{
 })
 
 verificarUrl.addEventListener("click", async function(e){
-    const tempOllama = ollamaUrl.value;
+    let tempOllama;
+
+    if (ollamaUrl.value[ollamaUrl.value.length - 1] === "/") {
+      tempOllama = ollamaUrl.value.substr(0, ollamaUrl.value.length - 1);
+    } else {
+      tempOllama = ollamaUrl.value;
+    }
+
+    tempOllama = tempOllama.replace(/\s/g, "")
+
+    console.log(tempOllama)
+
+
   if(await verificarOllama(tempOllama)){
     localStorage.setItem("urlOllama", tempOllama);
     console.log(tempOllama);

@@ -1,15 +1,23 @@
-@media (max-width:1000px){
+@media (max-width:950px){
+
     body{
         margin: 0;
         width: 100%;
+        justify-content: center;
+        height: 100dvh;
     }
+
+    .welcome{
+        font-size: 30px;
+    }
+
     .chat{
         top: 45px;
         width: 100%;
     }
 
     nav{
-        background-color: red;
+        background-color: rgb(10, 10, 10);
         position: fixed;
         width: 100%;
         left: 0;
@@ -18,6 +26,56 @@
         padding: 10px;
     }
 
+    .sugestionContainer {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 15px;
+        padding: 15px;
+        scrollbar-width: none;
+        width: 80dvw;
+        margin-top: 0;
+    }
 
+    .sugestionContainer::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sugestion {
+        flex: 0 0 auto;
+        width: 80vw;
+        min-width: 50vw;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    .sugText{
+       font-size: 20px;
+    }
+
+    .starting{
+        width: 100vw;
+    }
+    
+    .interact{
+        bottom: 0;
+        width: 100%;
+    }
+
+    .inputText{
+        width: 100%;
+    }
+
+    .divInput{
+        border-radius: 0px;
+    }
+
+    .send{
+        border-radius: 0px;
+        left: 0;
+    }
 
 }
